@@ -127,18 +127,21 @@ root/
 
 - 文件未打开时不能进行读写操作
 - 成功打开file1，未写入时读取文件显示文件为空
+  
 (2)测试两种写入文件的方式
 
 <img width="194" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/2fcf6c65-ffae-47a7-8a94-59ce88da3897">
 <img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/a9e16399-cff3-4e3b-b2c5-4613c129ebc3">
  
 (3)测试写入过程中数据块的分配及文件的访问时间和修改时间
+
 <img width="168" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/fa8aa608-7588-4844-942f-bbeca79e13cb">
 
 <img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/f2b33660-b386-4c3d-aa26-47f39cb56440">
 
 - 第一次输入103个a覆盖文件原有内容，再追加103x4个字符，总共515个字符，一个数据块存不下，需要在写入时分配数据块，可以从文件大小及读出结果看出成功分配了数据块。
 - 从ls的结果可以看出，file1的modifytime在写入文件时被修改，lastaccesstime在读文件时被修改
+  
 (4)测试文件的关闭
 
 <img width="192" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/c19ac4ba-7c86-4688-8192-3161c1833105">
@@ -166,11 +169,11 @@ root/
 <img width="171" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/fd09d271-e754-4f09-ad2a-b4d5f8f67e7b">
 
 ### 16.测试多级索引
-<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/fbe8d6b1-2eb0-4e7e-8af5-4dd319e3b6f5">
+<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/650c513c-8c31-4df2-8773-9f5f48018a21">
 
-<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/851ec9c9-1239-4048-9f12-9b7e6a188cb9">
+<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/0b314a74-8b12-4fad-8d30-7221b4dcbbee">
 
-<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/7c9be0a5-c66c-42a6-b596-579a002aeeb2">
+<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/ae86b923-cbb4-4b14-a428-5cf2edefcfe9">
 
 输入两次2500个字符，共5000个字符，需要10个数据块来存储（如果没有索引文件是无法分配这么多块的）。从运行结果可以看出，文件成功分配了5000字节空间并能读出5000个a（太长了，没有放全），之后成功删除文件并在删除时关闭了文件。
 
