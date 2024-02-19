@@ -85,88 +85,88 @@ root/
 ### 6.cd+dir_name/path：改变当前目录路径
 进入当前目录下的子目录dir1：
 
-<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/b38c3646-8fdd-4fa4-82cd-1e71dc4bbc4e">
+<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/40a7426b-5270-4fce-9dbc-6a30c12d9249">
 
 返回上级目录，再使用相对路径进入dir1下的目录dir11：
 
-<img width="167" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/81ab9100-d5a5-4099-ae0c-d81710a26d32">
+<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/633e8389-a5b6-4f4a-a5b6-eb2853708854">
 
 在任意目录下使用绝对路径可进入另一路径下的目录：
 
-<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/ff4887b7-7344-435c-a609-c4312136483d">
+<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/b6d8d92b-15d8-4975-9990-911da0a07885">
 
 使用cd  /命令可直接返回根目录：
 
-<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/b43d8c73-afcf-4fda-a35d-b55fe5f0f519">
+<img width="167" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/17e18e2c-55f5-4041-8f70-f0504375b43b">
 
 ### 7.chmod+name+rwx：修改当前目录下名为name的目录或文件的访问权限，rwx为包含想要设置权限字符的字符串
-<img width="240" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/11a807f7-97b5-4c1d-819e-5cd6523af7ed">
+<img width="342" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/73697e03-3ba3-497d-9fcf-83b43f0d7cb0">
 
 - **测试x权限：**
-<img width="342" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/6f6673fc-bf39-495d-a51c-e362c5b3cf1b">
+<img width="240" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/c9d5dfb2-ac31-4ad3-b7e7-efc4f9193bfa">
 
 - **测试w权限：**
-<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/78076079-e9bf-4b45-8355-987aa427c5e5">
+<img width="335" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/e468fe51-d3f3-42f4-821c-d2a034aa16b0">
 
 - **测试r权限：**
-<img width="335" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/7050b89a-896d-43b4-bddc-e751d3790e62">
+<img width="276" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/bd7f148d-4054-434a-a037-d1d53cf7a344">
 
 ### 8.rmdir+dir_name：删除空目录，若目录不为空则不能删除
-<img width="276" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/facbd5ae-4a4c-477e-a93e-44e43102012a">
+<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/8aa5eb1f-75a4-411d-87b4-4314635fc4b4">
 
 - dir1不为空所以不能删除
 - 当前目录下不存在dir所以不能删除
 - dir3为空目录被成功删除
 ### 9.rmdir+-r+dir_name：删除目录及目录下所有目录和文件
-<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/f0a640ef-0f66-47d2-8bf8-5dcb83f2a012">
+<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/3ba9d3d8-6156-4584-9cfe-7b47c6a4e1eb">
 
 ### 10.open+file_name：打开文件，close+file_name：关闭，read+file_name：读出write+file_name+>/>>+...：>为写入时覆盖原文件，>>为写入时追加内容到文件末尾
 (1)测试打开文件和读文件
 
-<img width="167" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/0218c044-359b-4157-9df0-454e03ca1821">
+<img width="194" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/866d6175-3e21-4240-a0a6-7e13b09faf91">
 
 - 文件未打开时不能进行读写操作
 - 成功打开file1，未写入时读取文件显示文件为空
   
 (2)测试两种写入文件的方式
 
-<img width="194" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/2fcf6c65-ffae-47a7-8a94-59ce88da3897">
-<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/a9e16399-cff3-4e3b-b2c5-4613c129ebc3">
- 
+<img width="167" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/d2765ac8-b6bd-413b-926b-626ef6a08cf6">
+<img width="168" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/5002b47e-5613-40eb-bd20-a7b3eb1d388c">
+
 (3)测试写入过程中数据块的分配及文件的访问时间和修改时间
 
-<img width="168" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/fa8aa608-7588-4844-942f-bbeca79e13cb">
+<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/124b7004-a5e4-47b3-8bbe-e31f2c3cdb65">
 
-<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/f2b33660-b386-4c3d-aa26-47f39cb56440">
+<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/ff3a51da-e6ca-42b3-bb96-be4428068a09">
 
 - 第一次输入103个a覆盖文件原有内容，再追加103x4个字符，总共515个字符，一个数据块存不下，需要在写入时分配数据块，可以从文件大小及读出结果看出成功分配了数据块。
 - 从ls的结果可以看出，file1的modifytime在写入文件时被修改，lastaccesstime在读文件时被修改
   
 (4)测试文件的关闭
 
-<img width="192" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/c19ac4ba-7c86-4688-8192-3161c1833105">
+<img width="192" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/934f9663-9937-4b5b-9fbe-697cf8b88b1c">
 
 (5)测试文件的访问权限
 
-<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/05cfe467-42e3-4ce7-9628-5164ce97995a">
+<img width="416" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/41b001f9-40e8-4a34-8698-d4e4b4261581">
 
 ### 11.password：修改密码
-<img width="213" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/a062fcff-36e3-4eed-a971-9a101cbcb570">
+<img width="213" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/638a73cf-0da2-4195-b45e-84a2c816da04">
 
 - 修改访问权限时需要输入密码，这里使用这个功能来验证密码是否成功被修改
 ### 12.login：登录   logoff：登出
-<img width="157" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/491502e9-92c9-41cc-84fb-c9ece7297669">
+<img width="254" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/3f9d122c-4f9b-4719-9388-922b3527f10e">
 
 - 未登出时不能重复登录
 - 登出后重新登录文件系统内容保持不变
 ### 13.若输入不存在的命令，系统会给出提示
-<img width="254" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/c9e56960-af66-4081-858c-0e31dff64376">
+<img width="171" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/83b87e6b-6788-4a74-92a6-71e749232c47">
 
 ### 14.退出文件系统
-<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/eab5b956-2343-40a2-8c2a-81a380fc83d0">
+<img width="157" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/46105a5e-8ab9-43ef-bf6c-1d4b618627d0">
 
 ### 15.format:格式化
-<img width="171" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/fd09d271-e754-4f09-ad2a-b4d5f8f67e7b">
+<img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/3828369c-4cdc-480d-84e9-7ae6538d5c1d">
 
 ### 16.测试多级索引
 <img width="415" alt="image" src="https://github.com/xuchangtolearn/File-System--Ext2--XJTUOS-/assets/147292722/650c513c-8c31-4df2-8773-9f5f48018a21">
