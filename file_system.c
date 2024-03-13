@@ -903,6 +903,7 @@ void delete(uint8_t type_num,char name[255],int flag)
                 else
                 {
                     printf("The block is not empty.\n");
+                    fclose(fp);
                     return;
                 }
             }
@@ -918,6 +919,7 @@ void delete(uint8_t type_num,char name[255],int flag)
     }
     else
     {
+        fclose(fp);
         return;
     }
     printf("%s is deleted successfully!\n",name);
